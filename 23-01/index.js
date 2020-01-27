@@ -286,31 +286,35 @@ pigLatin(“He told us a very exciting tale.“) ➞ “Ehay oldtay usway away e
 function pigLatin(str) {
   let translation = [];
   let splitStr = str.toLowerCase().split(" ");
-  //const vowels = ["a", "e", "i", "o", "u"];
+  console.log(splitStr + "This is split arr");
+  const vowels = ["a", "e", "i", "o", "u"];
 
   for (let i = 0; i < splitStr.length; i++) {
     //i = 0 ---- splitStr = hi // i = 1 spliStr = that
-    // almost everytime I have an array, I need a for
+    // almost every time I have an array, I need a for
     let firstChr = splitStr[i][0]; //h
     let remainder = splitStr[i].slice(1, splitStr[i].length); //igo
-    // if (vowels.includes(firstChr.toLowerCase())) {
-    //   let firstChrVal =
-    //     (i ? firstChr : firstChr.toUpperCase()) + remainder + "way";
-    // } else {
-    //   if (i == 0) {
-    //     let firstChrRan = remainder[0];
-    //     let wordRem = remainder.slice(1, remainder.length);
-    //     remainder = firstChrRan.toUpperCase() + wordRem;
-    //   }
-    const newString = remainder + firstChr + "ay";
-    //igo + h + ay //hat + z + ay
-    translation.push(newString);
+    console.log(remainder + "remainder");
+    if (vowels.includes(firstChr)) {
+      const firstChrVal =
+        (i ? firstChr : firstChr.toUpperCase()) + remainder + "way";
+      translation.push(firstChrVal);
+    } else {
+      if (i == 0) {
+        let firstChrRan = remainder[0];
+        let wordRem = remainder.slice(1, remainder.length);
+        remainder = firstChrRan.toUpperCase() + wordRem;
+      }
+      const newString = remainder + firstChr + "ay";
+      //igo + h + ay //hat + z + ay
+      translation.push(newString);
+      console.log(translation);
+    }
+    let result = translation.join(" ");
+    return result;
   }
-  let result = translation.join(" ");
-  return result;
 }
-
-const strPig = "higo that is fun";
+const strPig = "are are is";
 console.log(pigLatin(strPig));
 
 /*const pigLatin = string1 => {
