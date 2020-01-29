@@ -228,7 +228,6 @@ function nameOfThatMonth(num) {
     case 1:
       result = monthNames[0];
       break;
-      break;
     case 2:
       result = monthNames[1];
       break;
