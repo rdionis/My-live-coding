@@ -260,3 +260,18 @@ console.log(
     indexOfFirst
 );
 // expected output: "The index of the first "dog" from the beginning is 40"
+
+const a = "réservé"; // with accents, lowercase
+const b = "RESERVE"; // no accents, uppercase
+
+console.log(a.localeCompare(b));
+// expected output: 1
+console.log(a.localeCompare(b, "en", { sensitivity: "base" }));
+// expected output: 0
+
+const paragraph1 = "The quick brown fox jumps over the lazy dog. It barked.";
+const regex = /[A-R]/g;
+const found = paragraph1.match(regex);
+
+console.log(found);
+// expected output: Array ["T", "I"]
