@@ -18,7 +18,9 @@ console.log("AGE EXERCISE");
 function age(birthYear) {
   let currentYear = new Date().getFullYear();
   let userAge = currentYear - birthYear;
-  return birthYear < currentYear && birthYear > 1900;
+  return birthYear <= currentYear && birthYear > 1900
+    ? `${userAge} years old`
+    : `Please enter a valid year.`;
 }
 
 console.log(age(1981));
@@ -26,6 +28,7 @@ console.log(age(1911));
 console.log(age(1952));
 console.log(age(1954));
 console.log(age(1926));
+console.log(age(18157));
 
 //DONE
 //Create a function that accepts a text from user and check if the user has entered a month name,
@@ -120,16 +123,16 @@ const twofer = (who = "you") => {
 console.log(twofer("Ali")); // -> "Two for me and one for Ali"
 console.log(twofer()); // -> "Two for me and one for you"
 
-//DONE MAS NAO PERCEBI
+//DONE
 //Complete the function below so that it still calculates the power of a number even if the `exp` argument is not passed to it.
-//The default `exp` should be set to 2.
+//The default `exp` should be set to 2. => HERE LIES THE ANSWER
 // Example: Calling the function with 2 and 4 will return 16 (2 to the power of 4).
 //If you call it with just 2, it should return 4 (2 to the power of 2).
 
 console.log("POWER EXERCISE");
 
 const exponent = (num, exp = 2) => {
-  let result = 1;
+  let result = 1; // because I have a multiplication, the result should start on 1 and not 0 (since multiplying by zero is always zero)
 
   for (let i = 0; i < exp; i++) {
     result *= num;
@@ -141,6 +144,7 @@ const exponent = (num, exp = 2) => {
 console.log(exponent(3, 3)); // -> 27
 console.log(exponent(3)); // -> 9,
 console.log(exponent(8));
+console.log(exponent(8, 2));
 
 // Create a function will calculate a student degrees for 6 subjects,
 // if the average was less than 70 will print (F)
@@ -150,11 +154,35 @@ console.log(exponent(8));
 // And over 90 print (A+)
 console.log("AVERAGE EXERCISE");
 
-// const averageSixSubjects = (acc, cur) => acc + cur;
+const studentDe = (...args) => {
+  //here I use the spread operator, since six arguments is too much
+  let result = ""; // it is not a must to use result, but it is practical
+  let avg = 0;
+  console.log(args.length + " length"); // it will print the number of arguments (it is useful)
+  //CONSOLE LOG IS YOUR BFF
 
-// let sum = arrDegrees.reduce(averageSixSubjects, 0);
-// let average = sum / arrDegrees.length;
-// console.log(averageSixSubjects(15, 80, 90, 56, 25, 35));
+  avg = Math.floor(args.reduce((acc, cur) => acc + cur) / args.length); //whatever is in args ends up in cur and is added to acc one by one
+  // I am using a callback function - reduce is a function calling another function (there are two functions here)
+
+  //We can also use "for" for this
+  // for (let i = 0; i < args.length; i++) {
+  //   sum += args[i]; //adds all the indexs in the args array
+  // }
+
+  if (avg < 70) {
+    result = "Your final score is F";
+  } else if (avg >= 70 && avg < 80) {
+    result = "Your final score is C";
+  } else if (avg >= 90) {
+    result = "Your final score is A+";
+  } else {
+    result = "Sorry, something went wrong.";
+  }
+
+  console.log(avg + " Avg");
+  return result;
+};
+console.log(studentDe(33, 55, 88, 88, 88, 5, 5.5555555));
 
 // const numArr = [1, 3, 4, 6, 7]; //if I want to create a function, it must be with const
 // const reducer = (acc, cur) => acc + cur; // accumulator is my box, the current value is the value of every item

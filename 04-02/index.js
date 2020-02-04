@@ -314,3 +314,11 @@ console.log(countLetters("teste teste teste"));
 // }
 // console.log(countOccurrences("yyyyyy", "y"));
 // console.log(countOccurrences("Hi, I am Raquel", "p"));
+
+function test() {
+  for (var i = 0; i < 5; i++) {
+    console.log("Loop: " + i);
+  }
+}
+test();
+console.log("After: " + i);
