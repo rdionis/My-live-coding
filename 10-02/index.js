@@ -262,7 +262,7 @@ const programming = {
 programming.languages.push("Go");
 
 // Change the difficulty to the value of 7.
-programming.difficulty = 7;
+programming.difficulty = 7; // Hadi prefers the dot notation when we are changing a property's value
 
 // Using the delete keyword, write the command to remove the jokes key from the programming object.(need Google)
 delete programming.jokes;
@@ -278,6 +278,7 @@ for (let i = 0; i < array.length; i++) {
 }
 
 // Using a loop, console.log all of the keys in the programming object.
+console.log("ALL KEYS");
 let programmingKeys = Object.keys(programming);
 for (let i = 0; i < programmingKeys.length; i++) {
   console.log(programmingKeys[i]);
@@ -285,7 +286,11 @@ for (let i = 0; i < programmingKeys.length; i++) {
 for (let key in programming) {
   console.log(key);
 }
+console.log("ALL OF THE KEYS - alternative way");
+console.log(Object.getOwnPropertyNames(programming));
+
 // Using a loop, console.log all of the values in the programming object.
+console.log("ALL VALUES");
 for (let key in programming) {
   console.log(programming[key]);
 }
@@ -306,3 +311,13 @@ console.log(programming.isTrue());
 // Bonus:
 // Make sure that any other code cannot delete or change properties of the object.(need Google)
 Object.freeze(programming);
+
+//Object.getOwnPropertyNames
+
+const myself = {
+  name: "Raquel",
+  age: 24,
+  profession: "dancer"
+};
+
+console.log(Object.getOwnPropertyNames(myself));
