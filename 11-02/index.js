@@ -201,11 +201,32 @@ console.log(waldo("Is Raul here?"));
 //The first ten prime numbers are 2, 3, 5, 7, 11, 13, 17, 19, 23 and 29.
 // Examples:
 // isPrime(7) ➞ true isPrime(9) ➞ false isPrime(10) ➞ false
-
-// let
-// function prime (userNum){
-
-// }
+console.log("PRIME NUMBERS");
+function isPrime(userNum) {
+  if (userNum == 2) {
+    return true;
+  } else if (userNum % 2 !== 0 && userNum % 3 !== 0) {
+    return true;
+  } else {
+    return false;
+  }
+}
+console.log(isPrime(17));
+console.log(isPrime(22));
+console.log(isPrime(2));
 
 // For the longest word. Create a function to find the longest word in a given string.
 // i.e. longestWord("this is a web development course") ➞ "development"
+console.log("LONGEST WORD");
+
+// function longestWord(userString) {
+//   let userArray = userString.split(" ");
+//   //   console.log(userArray);
+//   for (let i = 0; i < userArray.length; i++) {
+//       userArray.length;
+
+//       console.log(userArray[i]);
+//     }
+//   }
+// }
+// longestWord("Where is the longest word");

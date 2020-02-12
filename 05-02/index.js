@@ -117,6 +117,7 @@ function zodiac(name, day, month, year) {
 }
 let outerResult = identity.zodiacSign();
 return `Hi, ${name}, you were born on ${day}.${month}.${year} and your Zodiac sign is ${outerResult}.`;
+shsh;
 console.log(zodiac("Raquel", "21", "03", "1981"));
 console.log(zodiac("Joana", "21", "02", "1981"));
 
