@@ -278,3 +278,12 @@ console.log(names);
 
 // new Date()
 // https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Date/now
+
+// For the longest word. Create a function to find the longest word in a given string.
+// i.e. longestWord("this is a web development course") ➞ "development"
+const longestWord = str => {
+  const strToArr = str.split(" ");
+  const word = strToArr.reduce((a, b) => (b.length > a.length ? b : a));
+  return word;
+};
+console.log(longestWord("this is a web development course"));
