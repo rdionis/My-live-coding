@@ -36,7 +36,7 @@ I'm 30 years old
     <meta name="viewport" content="width=450px, initial-scale=1.0" />
     <meta name="description" content="HTML test webpage" />
     <!-- this is CSS file-->
-    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="css/style.css" />
     <!-- the page title is very important, it's what appears on the tab on top of the website-->
     <title>Hadi Nsreeny</title>
     <!-- <p>aögljalkegjal agljaljglakjg</p> --- this will destroy your structure and will not show on some browsers/
@@ -197,9 +197,9 @@ I'm 30 years old
     </ol>
 
     <form action="index.php" method="POST">
-      <label for="firstName">First Name</label>
+      <label for="firstName">First Name</label><br />
       <input type="text" name="fname" id="firstName" value="Ali" /><br />
-      <label for="lastName">Last Name</label>
+      <label for="lastName">Last Name</label><br />
       <!--input is the box where the user can enter data-->
       <input
         type="text"
@@ -207,8 +207,50 @@ I'm 30 years old
         id="lastName"
         class="text"
         placeholder="please enter your last name"
+      />
+      <br />
+      <input
+        type="text"
+        name="lname"
+        id="lastName"
+        value="Olga"
+        readonly
       /><br />
+      <input type="checkbox" name="email" id="em" checked readonly />
+      send me a monthly letter
+      <br />
+      <input type="button" value="click" onclick="" />
+      <!--between the quotes after onclick is where the function call will live-->
+      <input type="submit" value="send" />
+      <input type="reset" value="clean" />
     </form>
+
+    <!--EXERCISE
+    PUT STUFF TOGETHER
+Please make a webpage that contains a google logo  in your  page.
+When a user clicks on it, the page should be redirected to the google home page.-->
+
+    <img
+      src="img/tree.jpeg"
+      alt="picture of a tree"
+      width="250px"
+      height="250px"
+      title="Tree"
+      name="tree"
+      id="3"
+      class="img"
+    />
+
+    <a href="https://www.google.com" target="_blank"
+      ><img
+        src="img/google.png"
+        alt="google logo"
+        width="25px"
+        height="25px"
+        name="Google"
+        class="img"
+    /></a>
+
     <a href="#top">Go up</a>
     <a href="#">Home</a>
   </body>
