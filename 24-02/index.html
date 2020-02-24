@@ -1,0 +1,215 @@
+<!-- what is user interface -->
+Hadi Nsreeny
+<br />
+I'm 30 years old
+
+<!-- HTML stands for HyperText Markup Language -->
+<!-- https://en.wikipedia.org/wiki/HTML -->
+<!-- Tag name -->
+
+<!-- Attribute -->
+
+<!-- Declaring the document type  -->
+
+<!-- The root element -->
+
+<!-- Basic structure -->
+
+<!-- HTML Document boilerplate:
+- Declaring the document type: <!DOCTYPE html>
+- The root element: <html lang="en"></html>
+- Basic document structure: <head>, <body>
+- A word on indentation and readability -->
+
+<!-- If I write hmtl and choose html5, it will create this boilerplate for me: -->
+<!DOCTYPE html>
+<html lang="en">
+  <!-- this tells the server which language we are using / you only have one head in each webpage-->
+  <head>
+    <!--- the head is where I declare everything about this page-->
+    <!-- this is the chr set-->
+    <meta charset="UTF-8" />
+    <!-- this will help Chrome's crawlers-->
+    <meta name="Hadi" content="this webpage about me" />
+    <meta name="author" content="Hadi Nsreeny" />
+    <meta name="keywords" content="webdev,css,html,javascript" />
+    <meta name="viewport" content="width=450px, initial-scale=1.0" />
+    <meta name="description" content="HTML test webpage" />
+    <!-- this is CSS file-->
+    <link rel="stylesheet" href="style.css" />
+    <!-- the page title is very important, it's what appears on the tab on top of the website-->
+    <title>Hadi Nsreeny</title>
+    <!-- <p>aögljalkegjal agljaljglakjg</p> --- this will destroy your structure and will not show on some browsers/
+    don't put stuff that belongs in the body inside the head-->
+    <style>
+      /*this is a comment*/
+      /*here indigo¹  q⁵UOÜ/*-5#IGAY
+      ,9*--+++
+      <link rel="stylesheet" href="style.css" />s only CSS part --- avoid this: always use an external stylesheet*/
+      /*CSS is read from top to bottom, so the next command will overwrite the previous one (external stylesheet), but just for h1*/
+      h1 {
+        color: black;
+      }
+      li {
+        color: indigo;
+      }
+    </style>
+  </head>
+  <body>
+    <!-- this is the place to be smart and creative -->
+    <nav>
+      <ul>
+        <li><a href="#">home</a></li>
+        <li>call us</li>
+        <li><a href="about.html">about us</a></li>
+      </ul>
+    </nav>
+
+    <h1 id="top">First page</h1>
+    <a href="#down">Go down</a>
+    <h5>test display</h5>
+    <p>
+      aögljalkegjal agljaljglakjg
+      <!-- you can have nested elements-->
+    </p>
+
+    <p>
+      asfjöaljglakjg aljflakjglkahglk aljaljgalkgj
+    </p>
+    <!-- <a> stands for anchor; "href" stands for hyper reference / <a> is an inline element: it doesn't take all the horizontal space-->
+
+    <a href="https://www.google.com" target="_blank">click me 😃</a>
+    <!-- "alt" is the alternative that shows in case the image doesn't show or the webpage is being read to the user-->
+    <img
+      src="tree.jpeg"
+      alt="picture of a tree"
+      width="250px"
+      height="250px"
+      title="Tree"
+      name="tree"
+      id="3"
+      class="img"
+    />
+    <!-- name and id has to do with the back end side; id should be unique-->
+    <!-- the class here is related to classes in CSS but has nothing to do with classes from JS-->
+    <p>
+      <b>Lorem ipsum dolor</b>Lorem ipsum dolor, <em>sit amet</em>sit amet
+      consectetur adipisicing elit. Aut, placeat?
+    </p>
+    <p>
+      <i>Lorem ipsum dolor</i>sit amet consectetur adipisicing elit. Natus nihil
+      facilis temporibus <small>ratione</small> molestiae aspernatur fuga
+      veritatis voluptatum aliquid beatae.
+    </p>
+    <p>
+      <strong>Ipsum dolor </strong> sit amet consectetur adipisicing elit. Quia,
+      pariatur. Lorem ipsum dolor sit <sub>amet consectetur</sub> adipisicing
+      elit. <sup>Asperiores</sup>, obcaecati?
+    </p>
+
+    <p>
+      Lorem <mark>dolor</mark> sit amet <del>consectetur</del> adipisicing elit.
+      Officia, in?
+    </p>
+
+    <p>
+      Lorem ipsum dolor sit amet consectetur adipisicing elit. Mollitia
+      praesentium aspernatur necessitatibus. Vel earum tenetur provident neque!
+      Itaque voluptas in eius sed quas corporis dignissimos quod eaque nam
+      expedita eligendi reprehenderit, magnam inventore possimus quasi maxime ad
+      error deserunt impedit, assumenda qui maiores! Quia, soluta quos? Tempora
+      numquam libero quo.
+    </p>
+
+    <p>
+      Lorem ipsum dolor sit amet consectetur adipisicing elit. Mollitia
+      praesentium aspernatur necessitatibus. Vel earum tenetur provident neque!
+      Itaque voluptas in eius sed quas corporis dignissimos quod eaque nam
+      expedita eligendi reprehenderit, magnam inventore possimus quasi maxime ad
+      error deserunt impedit, assumenda qui maiores! Quia, soluta quos? Tempora
+      numquam libero quo.
+    </p>
+    <p>
+      Lorem ipsum dolor sit amet consectetur adipisicing elit. Mollitia
+      praesentium aspernatur necessitatibus. Vel earum tenetur provident neque!
+      Itaque voluptas in eius sed quas corporis dignissimos quod eaque nam
+      expedita eligendi reprehenderit, magnam inventore possimus quasi maxime ad
+      error deserunt impedit, assumenda qui maiores! Quia, soluta quos? Tempora
+      numquam libero quo.
+    </p>
+    <p>
+      Lorem ipsum dolor sit amet consectetur adipisicing elit. Mollitia
+      praesentium aspernatur necessitatibus. Vel earum tenetur provident neque!
+      Itaque voluptas in eius sed quas corporis dignissimos quod eaque nam
+      expedita eligendi reprehenderit, magnam inventore possimus quasi maxime ad
+      error deserunt impedit, assumenda qui maiores! Quia, soluta quos? Tempora
+      numquam libero quo.
+    </p>
+    <p>
+      Lorem ipsum dolor sit amet consectetur adipisicing elit. Mollitia
+      praesentium aspernatur necessitatibus. Vel earum tenetur provident neque!
+      Itaque voluptas in eius sed quas corporis dignissimos quod eaque nam
+      expedita eligendi reprehenderit, magnam inventore possimus quasi maxime ad
+      error deserunt impedit, assumenda qui maiores! Quia, soluta quos? Tempora
+      numquam libero quo.
+    </p>
+    <p>
+      Lorem ipsum dolor sit amet consectetur adipisicing elit. Mollitia
+      praesentium aspernatur necessitatibus. Vel earum tenetur provident neque!
+      Itaque voluptas in eius sed quas corporis dignissimos quod eaque nam
+      expedita eligendi reprehenderit, magnam inventore possimus quasi maxime ad
+      error deserunt impedit, assumenda qui maiores! Quia, soluta quos? Tempora
+      numquam libero quo.
+    </p>
+
+    <table>
+      <!--caption works like a title but it is fixed | it is centered by default-->
+      <caption>
+        User Data
+      </caption>
+      <tr>
+        <th>Name</th>
+        <th>Age</th>
+        <th>Address</th>
+      </tr>
+      <tr>
+        <td>Ali</td>
+        <td>22</td>
+        <td>Berlin</td>
+      </tr>
+      <tr id="down">
+        <td>Olga</td>
+        <td>34</td>
+      </tr>
+    </table>
+
+    Shopping List
+    <ul type="square">
+      <li>Milk</li>
+      <li>Eggs</li>
+      <li>Pasta</li>
+    </ul>
+
+    <ol type="I">
+      <li>1.Eat</li>
+      <li>2.Sleep</li>
+      <li>3.Repeat</li>
+    </ol>
+
+    <form action="index.php" method="POST">
+      <label for="firstName">First Name</label>
+      <input type="text" name="fname" id="firstName" value="Ali" /><br />
+      <label for="lastName">Last Name</label>
+      <!--input is the box where the user can enter data-->
+      <input
+        type="text"
+        name="lname"
+        id="lastName"
+        class="text"
+        placeholder="please enter your last name"
+      /><br />
+    </form>
+    <a href="#top">Go up</a>
+    <a href="#">Home</a>
+  </body>
+</html>

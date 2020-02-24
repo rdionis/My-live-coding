@@ -1,0 +1,12 @@
+body {
+  background-color: pink;
+  color: olive;
+}
+/*CSS is read from top to bottom, so the next command will overwrite the previous one, but just for h1*/
+h1 {
+  color: peru;
+}
+
+#down {
+  color: red;
+}
