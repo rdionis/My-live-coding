@@ -9,19 +9,28 @@ I'm 30 years old
 
 <!-- Attribute -->
 
-<!-- Declaring the document type  -->
-
-<!-- The root element -->
-
-<!-- Basic structure -->
-
 <!-- HTML Document boilerplate:
 - Declaring the document type: <!DOCTYPE html>
 - The root element: <html lang="en"></html>
 - Basic document structure: <head>, <body>
 - A word on indentation and readability -->
 
-<!-- If I write hmtl and choose html5, it will create this boilerplate for me: -->
+<!-- If I write html and choose html5, it will create this boilerplate for me: -->
+<!--
+  <!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+</head>
+<body>
+  
+</body>
+</html>
+-->
+
 <!DOCTYPE html>
 <html lang="en">
   <!-- this tells the server which language we are using / you only have one head in each webpage-->
@@ -35,7 +44,7 @@ I'm 30 years old
     <meta name="keywords" content="webdev,css,html,javascript" />
     <meta name="viewport" content="width=450px, initial-scale=1.0" />
     <meta name="description" content="HTML test webpage" />
-    <!-- this is CSS file-->
+    <!-- this is the CSS file-->
     <link rel="stylesheet" href="css/style.css" />
     <!-- the page title is very important, it's what appears on the tab on top of the website-->
     <title>Hadi Nsreeny</title>
@@ -43,9 +52,7 @@ I'm 30 years old
     don't put stuff that belongs in the body inside the head-->
     <style>
       /*this is a comment*/
-      /*here indigo¹  q⁵UOÜ/*-5#IGAY
-      ,9*--+++
-      <link rel="stylesheet" href="style.css" />s only CSS part --- avoid this: always use an external stylesheet*/
+      /*here is only CSS part --- avoid this: always use an external stylesheet*/
       /*CSS is read from top to bottom, so the next command will overwrite the previous one (external stylesheet), but just for h1*/
       h1 {
         color: black;
@@ -76,10 +83,12 @@ I'm 30 years old
     <p>
       asfjöaljglakjg aljflakjglkahglk aljaljgalkgj
     </p>
-    <!-- <a> stands for anchor; "href" stands for hyper reference / <a> is an inline element: it doesn't take all the horizontal space-->
+    <!-- <a> stands for anchor; "href" stands for hyper reference / <a> is an inline element:
+      it doesn't take all the horizontal space-->
 
     <a href="https://www.google.com" target="_blank">click me 😃</a>
-    <!-- "alt" is the alternative that shows in case the image doesn't show or the webpage is being read to the user-->
+    <!-- "alt" is the alternative that shows in case the image doesn't show or the webpage
+      is being read to the user-->
     <img
       src="tree.jpeg"
       alt="picture of a tree"
