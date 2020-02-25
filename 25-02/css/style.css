@@ -38,3 +38,6 @@ div {
   /*here you can play with the color*/
   background-color: rgba(190, 85, 181, 0.63);
 }
+#required {
+  color: red;
+}
