@@ -1,0 +1,9 @@
+body {
+  /*background-image: url(/img/dancers.jpeg);*/
+}
+
+.main-nav ul li {
+  list-style-type: none;
+  font-size: 25px;
+  color: rgb(19, 14, 14);
+}
