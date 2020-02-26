@@ -1,0 +1,23 @@
+body {
+  /* background-image: url(../img/dancer.jpeg); it can work without the .. but use them anyway for safety */
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.three-dancers {
+  width: 200px;
+  height: 200px;
+  border: 2px black solid;
+}
+
+h1,
+h4,
+p,
+div {
+  color: pink;
+}
+
+h1 {
+  font-size: 100px;
+}
