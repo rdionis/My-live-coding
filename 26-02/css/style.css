@@ -1,14 +1,46 @@
 body {
-  /* background-image: url(../img/dancer.jpeg); it can work without the .. but use them anyway for safety */
-  background-position: center;
+  background-image: url(../img/dancer.jpeg); /*it can work without the .. but use them anyway for safety */
+  background-position: top;
   background-repeat: no-repeat;
   background-size: cover;
+  margin: 0 auto;
+  /* I present several alternatives in case the selected font is not available for some reason */
+  font-family: "Indie Flower", Arial, Helvetica, sans-serif;
 }
 
 .three-dancers {
   width: 200px;
   height: 200px;
-  border: 2px black solid;
+  /*border short form*/
+  border: 5px white solid;
+  border-top: 3px red dashed;
+  border-bottom: 3px red dashed;
+  /*border long form*/
+  /* border-color: palegreen; */
+  /* border-style: dotted; */
+  /* border-width: ; */
+  border-radius: 50%;
+  /* border color each part differently --- NEVER DO THIS */
+  /* border-color: paleturquoise red pink black; */
+
+  padding: 8px 8px 20px 8px;
+  /* you can also do it like this,
+  but the one-line syntax is simpler,
+  therefore recommended 
+  padding-top: 8px;
+  padding-right: 8px;
+  padding-bottom: 20px;
+  padding-left: 8px; */
+
+  /*this is also an option,
+  if you want top and bottom to be the same,
+  but different from right and left
+  padding: 10px 50px;*/
+
+  /*if you want padding to be the same all around,
+  just do this:
+  padding: 10px;*/
+  margin: 100px;
 }
 
 h1,
@@ -20,4 +52,93 @@ div {
 
 h1 {
   font-size: 100px;
+}
+
+.square {
+  width: 100px;
+  height: 100px;
+  background-color: red;
+  border: 2px black solid;
+  margin: 10px;
+}
+
+.rectangle {
+  width: 100px;
+  height: 200px;
+  background-color: brown;
+  border: 2px black dashed;
+  margin: 10px;
+}
+
+.circle {
+  width: 100px;
+  height: 100px;
+  background-color: cadetblue;
+  border: 2px black dotted;
+  border-radius: 50%;
+  margin: 10px;
+}
+
+.outside-sq {
+  width: 200px;
+  height: 150px;
+  background-color: blueviolet;
+  border: 2px black solid;
+  margin: 10px;
+  padding: 0;
+}
+
+.circle-inside-sq {
+  width: 150px;
+  height: 100px;
+  background-color: pink;
+  border: 2px black solid;
+  border-radius: 50%;
+  margin: 20px auto;
+}
+
+.triangle {
+  width: 0px;
+  height: 0px;
+  border-top: 180px solid transparent;
+  border-bottom: 0px solid transparent;
+  border-right: 140px blue solid;
+  margin: 10px;
+}
+.test-box {
+  width: 50%;
+  height: 34px;
+  border: black solid;
+}
+
+.random-text {
+  /*here it is ok to use pixel*/
+  letter-spacing: 5px;
+  word-spacing: 20px;
+  line-height: 15px;
+  text-align: center;
+  text-transform: lowercase;
+  text-decoration: underline;
+}
+p:last-child {
+  background-color: red;
+}
+
+div p:only-child {
+  background-color: blueviolet;
+}
+
+.move {
+  width: 400px;
+  height: 100px;
+  background-color: magenta;
+  border: 2px #ccc dotted;
+}
+
+.move:hover {
+  width: 800px;
+  height: 800px;
+  background-color: yellow;
+  border: 2px palevioletred;
+  box-shadow: 5px 5px 5px gray;
 }
