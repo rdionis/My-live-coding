@@ -1,3 +1,7 @@
+/* @font-face {
+  font-family: "Indie Flower";
+  src: url(../fonts/IndieFlower-Regular.ttf) format("truetype");
+} */
 body {
   background-image: url(../img/dancer.jpeg); /*it can work without the .. but use them anyway for safety */
   background-position: top;
@@ -44,6 +48,8 @@ body {
 }
 
 h1,
+h2,
+h3,
 h4,
 p,
 div {
@@ -120,7 +126,7 @@ h1 {
   text-transform: lowercase;
   text-decoration: underline;
 }
-p:last-child {
+div p:last-child {
   background-color: red;
 }
 
