@@ -1,0 +1,355 @@
+/*CSS Selectors*/
+
+/*Element Selector*/
+
+html {
+  font-size: 30px;
+  margin: 0;
+}
+
+/* #id selector*/
+#random-text {
+  color: teal;
+}
+/* .class selector*/
+.main-page {
+  background-color: lightgrey;
+}
+
+/* To select more than one element, we use ',' (comma), which here means "and"*/
+/* element,element Selector
+  element  AND element 
+  */
+/* span,
+div {
+  background-color: turquoise;
+} */
+/* element element Selector
+  element inside element 
+  */
+div p {
+  /*this affects every p inside every div*/
+  color: firebrick;
+}
+
+/* parent element> direct child element*/
+
+div > p {
+  /*this only affects the direct children and not the grandchildren*/
+  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet", sans-serif;
+  text-decoration: underline;
+}
+
+/* element+element  Selector
+  element immediately after element */
+
+div + span {
+  /*this affects the element immediately after the '+' */
+  color: orchid; /*this will affect every span immediately after a div*/
+}
+
+/* element1~element2 Selector 
+  element preceded element */
+span ~ p {
+  /*this will affect every p that is preceded by a span anywhere in the page */
+  color: peachpuff;
+}
+
+/* [attribute] Selector */
+[name] {
+  background-color: greenyellow;
+}
+
+/* [attribute=value] selector  */
+[type="submit"] {
+  background-color: tomato;
+}
+/* [attribute~=value] selector
+  containing the value */
+[alt~="sun"] {
+  /* will grab any element that has an attribute "alt" containing the word "sun" (alone living, so without - or _) in their value*/
+  width: 100px;
+}
+
+/* [attribute^=value] selector
+  begins with the value */
+[alt^="tree"] {
+  /* this will affect any element that has an attribute "alt" that starts with "tree"*/
+  border: 2px #0e0c0c solid; /* here the # means hexadecimenal color*/
+  border-radius: 20%;
+}
+
+/* [attribute$=value] selector
+  value ends with  */
+[alt$="bigTree"] {
+  /* this will affect any element that has an attribute "alt" that ends with "bigTree"*/
+
+  padding: 5px;
+}
+
+/* [attribute*=value] selector
+  contains the substring */
+
+[class*="text"] {
+  font-size: 2rem;
+}
+
+/* pseudo-class  */
+/* :hover */
+[class*="text"]:hover {
+  background-color: olive;
+}
+/* :visited */
+a:visited {
+  color: rgb(145, 32, 32);
+}
+
+/* : */
+input:focus {
+  outline: none;
+  border: 2px pink solid;
+  box-shadow: 3px 3px 3px #ccc;
+}
+/*or I could do required*/
+input[name="firstName"] + span {
+  font-size: 30px;
+  color: red;
+}
+
+/* :active */
+a:active {
+  background-color: plum;
+  border-radius: 30%;
+}
+/* checked */
+input:checked {
+  width: 20px;
+  background-color: sandybrown;
+}
+
+/* ::after  
+  :after for css2 and ::after for css3 --- Internet Explorer is still not accepting css3
+  this is a case where you might have to repeat yourself*/
+/*this is for css3*/
+div[class="text-main"]::after {
+  content: " Hadi";
+}
+/*this is for css2*/
+
+div[class="text-main"]:after {
+}
+
+/* ::before/:before  */
+
+div[class="text-main"]::before {
+  content: "Hello, ";
+}
+
+/* :target */
+:target {
+  border: 3px black dashed;
+}
+
+/* :nth-child()
+tr:nth-child(1) {
+  border: darkgreen;
+  background-color: rgb(83, 0, 100);
+}
+
+tr:nth-child(2n + 1) {
+  border: darkgreen;
+  background-color: darkgreen;
+}
+/*this will affect every second child*/
+/* tr:nth-child(2n) {
+  color: white;
+  background-color: gray;
+} */
+
+/*this will affect every third child*/
+/* tr:nth-child(3n) {
+  color: white;
+  background-color: black;
+}
+tr:nth-last-child(1) {
+  color: white;
+  background-color: red;
+}
+
+th {
+  border: 2px black solid;
+  border-radius: 5%;
+}
+
+td {
+  border: 2px black solid;
+  border-radius: 5%;
+} */
+table {
+  font-style: italic;
+  font-weight: normal;
+}
+
+th,
+td {
+  border: 1px black solid;
+  border-radius: 10%;
+  padding: 7px;
+  font-size: 13px;
+  text-align: center;
+}
+
+/* tr:nth-child(1) {
+  background-color: yellow;
+} */
+
+tr:nth-child(8) :first-child {
+  opacity: 0;
+}
+tr:nth-child(9) :first-child {
+  opacity: 0;
+}
+
+tr:nth-child(1) td:nth-child(1n) {
+  opacity: 0;
+}
+tr:nth-child(1) td:first-child {
+  opacity: 1;
+  background-color: yellow;
+}
+tr:nth-child(1) td:last-child {
+  opacity: 1;
+  background-color: hotpink;
+}
+tr:nth-child(8) td:nth-child(2) {
+  background-color: rgb(136, 227, 250);
+}
+
+tr:nth-child(9) td:nth-child(2) {
+  background-color: rgb(8, 150, 185);
+}
+
+tr:nth-child(2) td:nth-child(1n) {
+  opacity: 0;
+}
+
+tr:nth-child(2) td:first-child {
+  opacity: 1;
+  background-color: rgb(8, 150, 185);
+}
+tr:nth-child(2) td:nth-child(2) {
+  opacity: 1;
+  background-color: orange;
+}
+tr:nth-child(2) td:last-child {
+  opacity: 1;
+  background-color: hotpink;
+}
+
+tr:nth-child(2) td:nth-last-child(2) {
+  opacity: 1;
+  background-color: darkorange;
+}
+
+tr:nth-child(2) td:nth-last-child(3),
+tr:nth-child(2) td:nth-last-child(4),
+tr:nth-child(2) td:nth-last-child(5) {
+  opacity: 1;
+  background-color: yellow;
+}
+
+tr:nth-child(2) td:nth-last-child(6) {
+  opacity: 1;
+  background-color: salmon;
+}
+
+tr:nth-child(3) td:nth-child(1n) {
+  opacity: 0;
+}
+
+tr:nth-child(3) td:first-child {
+  opacity: 1;
+  background-color: rgb(8, 150, 185);
+}
+tr:nth-child(3) td:nth-child(2) {
+  opacity: 1;
+  background-color: orange;
+}
+
+tr:nth-child(3) td:last-child {
+  opacity: 1;
+  background-color: hotpink;
+}
+
+tr:nth-child(3) td:nth-last-child(2) {
+  opacity: 1;
+  background-color: darkorange;
+}
+
+tr:nth-child(3) td:nth-last-child(3),
+tr:nth-child(3) td:nth-last-child(4) {
+  opacity: 1;
+  background-color: yellow;
+}
+
+tr:nth-child(3) td:nth-last-child(5) {
+  opacity: 1;
+  background-color: salmon;
+}
+
+tr:nth-child(3) td:nth-last-child(6) {
+  opacity: 1;
+  background-color: pink;
+}
+
+tr:nth-child(4) td:nth-child(1n),
+tr:nth-child(5) td:nth-child(3),
+tr:nth-child(5) td:nth-child(4),
+tr:nth-child(5) td:nth-child(5),
+tr:nth-child(5) td:nth-child(6) {
+  background-color: rgb(52, 185, 11);
+}
+
+tr:nth-child(4) td:first-child {
+  opacity: 1;
+  background-color: rgb(8, 150, 185);
+}
+
+tr:nth-child(4) td:nth-child(2) {
+  opacity: 1;
+  background-color: orange;
+}
+
+tr:nth-child(4) td:last-child {
+  opacity: 1;
+  background-color: hotpink;
+}
+
+tr:nth-child(4) td:nth-last-child(2) {
+  opacity: 1;
+  background-color: darkorange;
+}
+
+tr:nth-child(4) td:nth-last-child(3) {
+  opacity: 1;
+  background-color: yellow;
+}
+
+tr:nth-child(4) td:nth-last-child(4),
+tr:nth-child(4) td:nth-last-child(5) {
+  opacity: 1;
+  background-color: salmon;
+}
+
+tr:nth-child(4) td:nth-last-child(6) {
+  opacity: 1;
+  background-color: pink;
+}
+
+tr:nth-child(6) td:nth-child(n + 4) {
+  background-color: rgb(52, 185, 11);
+}
+
+tr:nth-child(6) td:nth-last-child(-n + 7) {
+  background-color: rgb(52, 185, 11);
+}
