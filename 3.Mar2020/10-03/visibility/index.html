@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./css/style.css" />
+    <title>Visibility</title>
+  </head>
+  <body>
+    <div class="main-div">
+      <h1>Let's talk about Visibility</h1>
+      <div class="div-images">
+        <img
+          id="original-img"
+          src="./img/dancer.jpeg"
+          alt="dancer"
+          caption="This is a dancer"
+        />
+        <img id="flipped-img" src="./img/dancer.jpeg" alt="dancer" />
+      </div>
+    </div>
+    <br />
+    <table>
+      <tr>
+        <td></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td>If my visibility property is set to "visible"...</td>
+        <td>
+          ... I will still show, even if my parent element's visibility is set
+          to "hidden"
+        </td>
+      </tr>
+      <tr>
+        <td>But if my visibility property is set to "collapse"...</td>
+        <td>
+          ... I will disappear and my space will be removed (similar to display:
+          none)
+        </td>
+      </tr>
+      <tr>
+        <td></td>
+        <td></td>
+      </tr>
+    </table>
+  </body>
+</html>
