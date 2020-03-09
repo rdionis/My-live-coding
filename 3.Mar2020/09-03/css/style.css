@@ -1,0 +1,50 @@
+/*Typography*/
+/*font link*/
+@font-face {
+  font-family: "Josefin Sans";
+  src: url(../fonts/JosefinSans-VariableFont_wght.ttf);
+}
+
+/*font-family*/
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/*selecting the root element*/
+:root {
+  font-size: 16px;
+  /* here, I am creating VARIABLES with a value - I am not applying the color to everything | I can use whatever name I want*/
+  --color-font: pink;
+  --hadi-main-text: 2px 2px;
+}
+
+h1 {
+  /*if your font has two words in the name, you need to put the name between quotes*/
+  font-family: "Josefin Sans";
+  font-size: 1rem;
+  color: var(--color-font);
+  padding: var(--hadi-main-text);
+}
+
+div {
+  font-size: 20px;
+}
+
+/*font-size*/
+/*font-style*/
+/*em and rem*/
+p {
+  font-size: 1em;
+  font-size: x-small; /*also comparing to the root
+  /*italic has to be available; oblique is a way to simulate italic by forcing the tilt"*/
+  font-style: oblique 20deg;
+  font-weight: bold;
+  /*shorthand for font*/
+  /* font: italic bold 2rem "Josefin Sans"; */
+  line-height: 2rem;
+  text-align: justify;
+}
+
+/*text-transform*/
