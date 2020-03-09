@@ -7,8 +7,8 @@
 
 /*font-family*/
 * {
-  margin: 0;
-  padding: 0;
+  /* margin: 0;
+  padding: 0; */
   box-sizing: border-box;
 }
 
@@ -20,12 +20,14 @@
   --hadi-main-text: 2px 2px;
 }
 
-h1 {
+.first-h1 {
   /*if your font has two words in the name, you need to put the name between quotes*/
   font-family: "Josefin Sans";
   font-size: 1rem;
   color: var(--color-font);
   padding: var(--hadi-main-text);
+  direction: rtl;
+  text-shadow: 4px 2px 2px gray;
 }
 
 div {
@@ -35,16 +37,60 @@ div {
 /*font-size*/
 /*font-style*/
 /*em and rem*/
-p {
+/* p {
   font-size: 1em;
-  font-size: x-small; /*also comparing to the root
+  /* font-size: x-small; /*also comparing to the root
   /*italic has to be available; oblique is a way to simulate italic by forcing the tilt"*/
-  font-style: oblique 20deg;
-  font-weight: bold;
-  /*shorthand for font*/
-  /* font: italic bold 2rem "Josefin Sans"; */
-  line-height: 2rem;
-  text-align: justify;
+/* font-style: oblique 20deg;
+  font-weight: bold; */
+/*shorthand for font*/
+/* font: italic bold 2rem "Josefin Sans"; */
+/* line-height: 2rem; */
+/* text-align: justify; */
+/* text-transform: uppercase; */
+/* direction: ltr; rtl = right to left; ltr= left to right */
+/* writing-mode: vertical-rl; */
+/* text-orientation: upright; */
+/* word-break: keep-all;
+  /* text-indent: 3rem; */
+/*word-spacing: 5px;
+} */
+
+.notice {
+  font-size: 1rem;
 }
 
+.notice ul {
+  line-height: 2;
+}
+.all-dates {
+  font-style: italic;
+}
+
+div ul li span {
+  vertical-align: super;
+}
 /*text-transform*/
+
+/* text-align */
+
+/* direction */
+
+/* writing-mode */
+
+/* text-orientation */
+
+/* text-shadow */
+
+/* word-break */
+
+/* text-indent */
+
+/* word-spacing */
+
+/*Icon*/
+
+i {
+  color: hotpink;
+  font-size: xx-large;
+}
