@@ -9,18 +9,18 @@ img {
   width: 35vw;
 }
 
-/* .div-images {
+.div-images {
   visibility: hidden;
-} */
+}
 
-/* #original-img {
+#original-img {
   visibility: hidden;
-} */
-/* 
+}
+
 #flipped-img {
   -webkit-transform: scaleX(-1);
-  visibility: visible;
-} */
+  /* visibility: visible; */
+}
 
 table {
   border: 2px black solid;
@@ -45,5 +45,6 @@ tr:nth-child(3) {
   background-color: rgba(21, 21, 141, 0.5);
   border: 2px black solid;
   visibility: visible; /* this will make the third row visible, even if the table's visibility is set to "hidden"
-  /* visibility: collapse; */ /*this will remove the element and the space it occupies --- however, the size of the other rows and columns are still calculated the same way*/
+*/
+  /* visibility: collapse; this will remove the element and the space it occupies --- however, the size of the other rows and columns are still calculated the same way */
 }

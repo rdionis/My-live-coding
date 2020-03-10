@@ -1,0 +1,50 @@
+.img-box {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+img {
+  height: 20vh;
+  border: 1px black solid;
+  padding: 2px 2px 15px 2px;
+  z-index: auto;
+  filter: grayscale();
+  opacity: 0.5;
+}
+
+.dancers1 {
+  transform: rotate(10deg);
+  margin-left: 5vw;
+}
+
+.dancers2 {
+  transform: rotate(20deg);
+  margin-left: 15vw;
+}
+
+.dancers3 {
+  margin-left: 25vw;
+  transform: rotate(10deg);
+}
+
+.dancers4 {
+  margin-top: 10vh;
+  margin-left: 25vw;
+  transform: rotate(-20deg);
+}
+
+/* .dancers1:hover,
+.dancers2:hover,
+.dancers3:hover,
+.dancers4:hover { */
+img:hover {
+  height: 25vh;
+
+  transform: rotate(0deg);
+  transition: 2s;
+  z-index: 1;
+  filter: initial;
+  opacity: 1;
+  cursor: pointer;
+}
