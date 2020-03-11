@@ -60,4 +60,16 @@ h1 {
   background-attachment: fixed;
 }
 
+/*adding flying clouds to build a Sky App*/
+.my-div {
+  background-image: url(../img/birds-flying-gif-8.gif),
+    url(../img/clouds-moving.gif), url(../img/clear-sky.jpeg);
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.my-div p {
+  font-size: 40px;
+}
+
 /* npm live-server */

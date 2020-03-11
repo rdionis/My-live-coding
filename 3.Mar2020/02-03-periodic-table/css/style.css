@@ -1,11 +1,12 @@
 td {
-  width: 50px;
-  height: 50px;
-  font-size: 25px;
+  width: 7vw;
+  height: 7vh;
+  font-size: 1rem;
   font-style: italic;
   text-align: center;
   border: 1px black solid;
   border-radius: 10%;
+  box-sizing: border-box;
 }
 
 tr td:first-child,
@@ -21,20 +22,22 @@ tr:nth-last-child(4) td:nth-child(3) {
   background-color: rgb(192, 239, 255);
 }
 
-tr:nth-child(1) td:nth-child(1n + 2),
-tr:nth-child(2) td:nth-child(1n + 3),
-tr:nth-child(3) td:nth-child(1n + 3),
-tr:nth-child(8) td:nth-child(1),
-tr:nth-child(8) td:nth-child(1),
-tr:nth-child(9) td:nth-child(1),
-tr:nth-child(8) td:nth-child(n + 16),
-tr:nth-child(9) td:nth-child(n + 16) {
+tr:nth-child(1) :nth-child(1n + 2),
+tr:nth-child(2) :nth-child(1n + 3),
+tr:nth-child(3) :nth-child(1n + 3),
+tr:nth-child(8) :nth-child(1),
+tr:nth-child(8) :nth-child(1),
+tr:nth-child(9) :nth-child(1),
+tr:nth-child(8) :nth-child(n + 16),
+tr:nth-child(9) :nth-child(n + 16) {
   opacity: 0;
 }
-tr:nth-child(1) td:nth-child(1),
-tr:nth-child(2) td:nth-last-child(3),
-tr:nth-child(2) td:nth-last-child(4),
-tr:nth-child(2) td:nth-last-child(5),
+
+tr td:nth-child(1n + 3) {
+  background-color: green;
+}
+tr:nth-child(1) :nth-child(1),
+tr:nth-child(2) td:nth-last-child(-n + 5),
 tr:nth-child(3) td:nth-last-child(3),
 tr:nth-child(3) td:nth-last-child(4),
 tr:nth-child(4) td:nth-last-child(3) {
@@ -58,9 +61,6 @@ tr:nth-child(7) td:last-child {
   background-color: rgb(250, 207, 126);
 }
 
-tr td:nth-child(1n + 3) {
-  background-color: green;
-}
 tr:nth-child(1) td:last-child,
 tr:nth-child(2) td:last-child,
 tr:nth-child(3) td:last-child,
