@@ -1,0 +1,27 @@
+/*this will apply the media query to all screens with max-width of 600px --- phones*/
+@media screen and (max-width: 600px) {
+  /* body {
+        background-color: blue;
+      } */
+  .column {
+    flex: 100%;
+  }
+  /*Nav bar*/
+
+  .hamburger {
+    display: block; /*or we can just move it, in this case*/
+    background-color: black;
+    width: 35px;
+    height: 5px;
+    margin: 6px 0;
+  }
+
+  .text-nav {
+    display: none;
+  }
+  .text-container-row {
+    /* display: flex; because this doesn't change, we don't need to repeat it */
+    flex-direction: column;
+    /* justify-content: space-around; because this doesn't change, we don't need to repeat it */
+  }
+}

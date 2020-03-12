@@ -1,0 +1,73 @@
+/* body {
+  background-color: green;
+} */
+
+/*this will apply the media query to all screens with min-width of 600px and max-width of 992px --- tablets and laptops*/
+
+@media screen and (min-width: 600px) and (max-width: 992px) {
+  body {
+    background-color: red;
+  }
+}
+
+/*this will apply the media query to all screens with min-width of 600px and max-width: 800px*/
+
+/* @media screen and (min-width: 600px) and (max-width: 800px){
+  body {
+    background-color: red;
+  }
+} */
+/* @media print {
+  body {
+    background-color: white;
+  }
+} */
+
+.text-container-row {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+}
+.column {
+  flex: 50vw; /*so each element takes half the screen*/
+}
+
+.text-container-row img {
+  width: 100%;
+}
+
+.hamburger {
+  display: none;
+  background-color: black;
+  width: 35px;
+  height: 5px;
+  margin: 6px 0;
+}
+
+/* this will apply the media query to all screens with max-width of 600px --- phones
+@media screen and (max-width: 600px) {
+  /* body {
+      background-color: blue;
+    } */
+  /* .column {
+    flex: 100%; */
+  }
+  /*Nav bar*/
+
+  /* .hamburger {
+    display: block; /*or we can just move it, in this case*/
+    /* background-color: black;
+    width: 35px;
+    height: 5px;
+    margin: 6px 0;
+  } */ */
+
+  /* .text-nav {
+    display: none;
+  } */
+  /* .text-container-row { */
+    /* display: flex; because this doesn't change, we don't need to repeat it */
+    /* flex-direction: column; */
+    /* justify-content: space-around; because this doesn't change, we don't need to repeat it */
+  /* }
+} */ */
