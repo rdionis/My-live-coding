@@ -1,0 +1,211 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  font-size: 16px;
+  --box-width: 3rem;
+  --box-color: green;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+}
+
+.box {
+  width: var(--box-width);
+  height: 2.5rem;
+  font-size: 2.5rem;
+  color: var(--box-color);
+  position: relative;
+  /*the animation name will bind the animation with the element*/
+  animation-name: move-down;
+  /*how long the animation will take*/
+  animation-duration: 3s;
+  /*this will tell how many times the animation will be repeated*/
+  animation-timing-function: linear;
+  animation-delay: 5s;
+  animation-iteration-count: infinite;
+  animation-direction: alternate-reverse;
+  animation-fill-mode: forwards;
+  animation-play-state: running;
+  /* animation: name duration timing-function delay iteration-count direction fill-mode; --- this is the shorthand for the whole animation properties --- IN THIS ORDER - THE ORDER IS VERY IMPORTANT*/
+}
+/*animation*/
+/*animation name can be whatever you want (no spaces)*/
+@keyframes move-down {
+  from {
+    top: 0;
+    color: lawngreen;
+    background-color: orange;
+  }
+  to {
+    top: 150px;
+    color: midnightblue;
+    background-color: red;
+  }
+}
+
+.size-change {
+  width: var(--box-width);
+  height: 2em;
+  border: 3px solid black;
+  position: relative;
+  animation-name: resize;
+  animation-duration: 2s;
+  animation-iteration-count: infinite;
+}
+
+@keyframes resize {
+  0% {
+    width: calc(var(--box-width) * 1.5);
+    background-color: lawngreen;
+  }
+  25% {
+    width: calc(var(--box-width) * 1.5);
+    background-color: lawngreen;
+  }
+  50% {
+    width: calc(var(--box-width) * 2.5);
+    background-color: greenyellow;
+  }
+  75% {
+    width: calc(var(--box-width) * 2.5);
+    background-color: goldenrod;
+  }
+  100% {
+    width: calc(var(--box-width) * 3.5);
+    background-color: green;
+  }
+}
+
+.box-up {
+  width: var(--box-width);
+  font-size: var(--box-width);
+  position: relative;
+  animation-name: up;
+  animation-iteration-count: infinite;
+  animation-duration: 3s;
+  animation-direction: alternate;
+}
+
+@keyframes up {
+  from {
+    top: 300px;
+  }
+  to {
+    top: 0;
+  }
+}
+
+.x-menu {
+  background-color: lightgray;
+  width: 4rem;
+  height: 3.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  flex-direction: column;
+  position: relative;
+}
+
+.line {
+  width: 3rem;
+  height: 0.4rem;
+  background-color: grey;
+  border-radius: 20%;
+}
+
+.line.sec {
+  background-color: purple;
+}
+
+.x-menu:hover .line.one {
+  animation-name: cross-one;
+  animation-duration: 3s;
+}
+@keyframes cross-one {
+  0% {
+    transform: rotate(10deg);
+    z-index: 1;
+    position: absolute;
+    top: 1.5rem;
+  }
+  25% {
+    transform: rotate(20deg);
+    z-index: 1;
+    position: absolute;
+    top: 1.5rem;
+  }
+
+  50% {
+    transform: rotate(30deg);
+    position: absolute;
+    top: 1.5rem;
+  }
+
+  75% {
+    transform: rotate(42deg);
+    position: absolute;
+    top: 1.5rem;
+  }
+  100% {
+    transform: rotate(45deg);
+    position: absolute;
+    top: 1.5rem;
+  }
+}
+
+.x-menu:hover .line.sec {
+  animation-name: cross-sec;
+  animation-duration: 3s;
+}
+
+@keyframes cross-sec {
+  0% {
+    transform: rotate(-10deg);
+    z-index: 1;
+    position: absolute;
+    top: 1.5rem;
+  }
+  25% {
+    transform: rotate(-20deg);
+    z-index: 1;
+    position: absolute;
+    top: 1.5rem;
+  }
+
+  50% {
+    transform: rotate(-30deg);
+    position: absolute;
+    top: 1.5rem;
+  }
+
+  75% {
+    transform: rotate(-42deg);
+    position: absolute;
+    top: 1.5rem;
+  }
+  100% {
+    transform: rotate(-45deg);
+    position: absolute;
+    top: 1.5rem;
+  }
+}
+/* .x-menu:hover .line.one {
+  transform: rotate(45deg);
+  align-self: center;
+  z-index: 1;
+  position: absolute;
+  top: 1.5rem;
+}
+
+.x-menu:hover .line.sec {
+  transform: rotate(-45deg);
+  align-self: center;
+  position: absolute;
+  top: 1.5rem;
+} */
