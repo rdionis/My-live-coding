@@ -209,3 +209,71 @@ body {
   position: absolute;
   top: 1.5rem;
 } */
+
+.y-menu {
+  background-color: lightgray;
+  width: 4rem;
+  height: 3.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  flex-direction: column;
+  position: relative;
+}
+
+.line.three,
+.line.four {
+  background-color: hotpink;
+}
+
+.y-menu:hover .line.three {
+  animation-name: cross-three;
+  animation-duration: 3s;
+}
+
+.y-menu:hover .line.four {
+  animation-name: cross-four;
+  animation-duration: 3s;
+}
+
+@keyframes cross-three {
+  from {
+    transform: rotate(5deg);
+    z-index: 1;
+    position: absolute;
+    top: 1.5rem;
+  }
+  to {
+    transform: rotate(45deg);
+    position: absolute;
+    top: 1.5rem;
+  }
+}
+
+@keyframes cross-four {
+  from {
+    transform: rotate(-5deg);
+    z-index: 1;
+    position: absolute;
+    top: 1.5rem;
+  }
+  to {
+    transform: rotate(-45deg);
+    position: absolute;
+    top: 1.5rem;
+  }
+}
+/* .x-menu:hover .line.one {
+  transform: rotate(45deg);
+  align-self: center;
+  z-index: 1;
+  position: absolute;
+  top: 1.5rem;
+}
+
+.x-menu:hover .line.sec {
+  transform: rotate(-45deg);
+  align-self: center;
+  position: absolute;
+  top: 1.5rem;
+} */
