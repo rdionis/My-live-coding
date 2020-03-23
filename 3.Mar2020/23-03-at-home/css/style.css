@@ -1,0 +1,40 @@
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+/* overflow */
+p {
+  width: 10rem;
+  height: 10rem;
+  background-color: lightcoral;
+  /* overflow: scroll; */
+  white-space: nowrap;
+  /* overflow-wrap: normal */
+}
+
+/* %100 of the parent */
+.main {
+  width: 75vw;
+  height: 50vh;
+  background-color: lightskyblue;
+}
+
+.box {
+  width: 50%;
+  height: 100%;
+  background-color: lime;
+}
+
+/* use more header footer */
+
+/* img vs background-image */
+/* https://blog.px-lab.com/html-img-tag-vs-css-background-image/ */
+
+/* clip-path */
+
+/*  */
+/* https://bennettfeely.com/clippy/ */
+
+/* SVG */
+/* https://developer.mozilla.org/en-US/docs/Web/SVG */
