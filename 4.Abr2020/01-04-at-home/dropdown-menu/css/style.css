@@ -1,0 +1,52 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.navbar {
+  background-color: rgb(104, 102, 102);
+  display: flex;
+  justify-content: flex-start;
+  flex-flow: row;
+  font-family: Tahoma, sans-serif;
+}
+/* style items */
+.list-item {
+  list-style: none;
+  font-size: 1rem;
+  color: white;
+  background-color: lightblue;
+  padding: 1rem;
+}
+
+a {
+  text-decoration: none;
+  color: white;
+}
+
+/* style buttons */
+.subnavbtn {
+  font-size: 1.75;
+  color: whitesmoke;
+  background-color: inherit;
+  font-family: inherit;
+  padding: 0.75rem;
+  border: none;
+  /*outline: none*/
+}
+
+/* styling dropdown container*/
+.subnav-content {
+  display: none;
+  position: absolute;
+  left: 0;
+  width: 100%;
+}
+
+/*dropdown hover*/
+
+.subnav:hover .subnav-content {
+  display: block;
+  transition: 0.4s ease-in;
+}
