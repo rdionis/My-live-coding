@@ -27,10 +27,10 @@ const calculate = () => {
   let firstNumber = parseInt(document.getElementById("firstNumber").value);
   let secondNumber = parseInt(document.getElementById("secondNumber").value);
   let select = document.getElementById("select");
-  if (select.option.value == "+") {
-    document.getElementById("sumResult").value = firstNumber + secondNumber;
-  }
-  if (select.option.value == "-") {
-    document.getElementById("sumResult").value = firstNumber - secondNumber;
-  }
+  // if (select.option.value == "+") {
+  document.getElementById("sumResult").value = firstNumber + secondNumber;
+  //   }
+  //   if (select.option.value == "-") {
+  //     document.getElementById("sumResult").value = firstNumber - secondNumber;
+  //   }
 };
