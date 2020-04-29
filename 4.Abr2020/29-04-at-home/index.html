@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>More on Events</title>
+  </head>
+  <body>
+    <h1>Hi This is an Event place</h1>
+    <button onclick="stop()">STOP Listening</button>
+    <form action="script.js">
+      <!--Why do you the script.js here? BACK END STUFF-->
+      <input type="text" name="userName" id="userData" />
+      <input type="submit" value="Send" />
+      <input type="reset" value="Clear" />
+      <button onclick="changeColor()">Change Color</button>
+    </form>
+    <div class="container">
+      <input type="text" name="num1" id="firstNumber" />
+      <span>+</span>
+      <input type="text" name="num2" id="secondNumber" />
+      <span>=</span>
+      <input type="text" name="sum" readonly id="sumResult" />
+    </div>
+    <div class="result"></div>
+    <script src="./index.js"></script>
+  </body>
+</html>

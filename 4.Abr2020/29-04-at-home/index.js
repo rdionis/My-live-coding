@@ -1,0 +1,56 @@
+function redBg() {
+  this.style.backgroundColor = "red";
+}
+function whiteBg() {
+  this.style.backgroundColor = "purple";
+}
+function newUser() {
+  result.innerHTML += "Hi this is you <br>";
+}
+
+function windowLoad() {
+  // setInterval(newUser, 1000);
+  // alert("Hi new person");
+}
+
+const stop = () => {
+  header.removeEventListener("mouseover", redBg);
+
+  header.removeEventListener("mouseleave", whiteBg);
+};
+function changeColor() {
+  event.preventDefault();
+  form.style.backgroundColor = "pink";
+}
+
+let header = document.querySelector("h1");
+let result = document.querySelector(".result");
+header.addEventListener("mouseover", redBg); //THIS IS THE FUNCTION CALL
+// header.removeEventListener("mouseover", function () {
+//  this.style.backgroundColor = "red";
+// }); //THIS IS NOT THE RIGHT WAY TO REMOVE EVENT - YOU NEED A FUNCTION NAME
+header.addEventListener("mouseleave", whiteBg);
+
+window.addEventListener("load", windowLoad);
+//browser action
+
+let form = document.querySelector("form");
+form.addEventListener("submit", () => {
+  alert("Thanks for your feedback");
+});
+form.addEventListener("reset", () => {
+  alert("Your Input has been cleared out");
+});
+
+// Simple calculator the user will be able to input two numbers for which they would like to do two types of calculations:
+// Basic Addition
+// Display the result of the calculation to the user immediately.
+// Bounce  include other Mathematical  Operations, the user can choose the operation from a select list (+ * - / % )
+
+const calculate = (firstNumber, secondNumber) => {
+  let firstNumber = document.getElementById(firstNumber);
+  let secondNumber = document.getElementById(secondNumber);
+  let sumResult = document.getElementById(secondNumber);
+  sumResult = firstNumber + secondNumber;
+};
+return result;
