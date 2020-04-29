@@ -1,34 +1,10 @@
-function redBg() {
-  this.style.backgroundColor = "red";
-}
-function whiteBg() {
-  this.style.backgroundColor = "purple";
-}
-function newUser() {
-  result.innerHTML += "Hi this is you <br>";
-}
-
-function windowLoad() {
-  // setInterval(newUser, 1000);
-  // alert("Hi new person");
-}
-
-const stop = () => {
-  header.removeEventListener("mouseover", redBg);
-
-  header.removeEventListener("mouseleave", whiteBg);
-};
-function changeColor() {
-  event.preventDefault();
-  form.style.backgroundColor = "pink";
-}
-
 let header = document.querySelector("h1");
 let result = document.querySelector(".result");
 header.addEventListener("mouseover", redBg); //THIS IS THE FUNCTION CALL
-// header.removeEventListener("mouseover", function () {
-//  this.style.backgroundColor = "red";
-// }); //THIS IS NOT THE RIGHT WAY TO REMOVE EVENT - YOU NEED A FUNCTION NAME
+// // header.removeEventListener("mouseover", function () {
+// //  this.style.backgroundColor = "red";
+// // });
+//THIS IS NOT THE RIGHT WAY TO REMOVE EVENT - YOU NEED A FUNCTION NAME
 header.addEventListener("mouseleave", whiteBg);
 
 window.addEventListener("load", windowLoad);
@@ -47,10 +23,14 @@ form.addEventListener("reset", () => {
 // Display the result of the calculation to the user immediately.
 // Bounce  include other Mathematical  Operations, the user can choose the operation from a select list (+ * - / % )
 
-const calculate = (firstNumber, secondNumber) => {
-  let firstNumber = document.getElementById(firstNumber);
-  let secondNumber = document.getElementById(secondNumber);
-  let sumResult = document.getElementById(secondNumber);
-  sumResult = firstNumber + secondNumber;
+const calculate = () => {
+  let firstNumber = parseInt(document.getElementById("firstNumber").value);
+  let secondNumber = parseInt(document.getElementById("secondNumber").value);
+  let select = document.getElementById("select");
+  if (select.option.value == "+") {
+    document.getElementById("sumResult").value = firstNumber + secondNumber;
+  }
+  if (select.option.value == "-") {
+    document.getElementById("sumResult").value = firstNumber - secondNumber;
+  }
 };
-return result;

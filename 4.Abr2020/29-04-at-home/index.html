@@ -17,9 +17,16 @@
     </form>
     <div class="container">
       <input type="text" name="num1" id="firstNumber" />
-      <span>+</span>
+      <span
+        ><select id="select">
+          <option value="+">+</option>
+          <option value="-">-</option>
+          <option value="*">*</option>
+          <option value="/">/</option>
+        </select></span
+      >
       <input type="text" name="num2" id="secondNumber" />
-      <span>=</span>
+      <button onclick="calculate()">=</button>
       <input type="text" name="sum" readonly id="sumResult" />
     </div>
     <div class="result"></div>
