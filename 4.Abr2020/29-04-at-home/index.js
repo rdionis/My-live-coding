@@ -1,3 +1,28 @@
+function redBg() {
+  this.style.backgroundColor = "red";
+}
+function whiteBg() {
+  this.style.backgroundColor = "white";
+}
+function newUser() {
+  result.innerHTML += "Hi this is you <br>";
+}
+
+function windowLoad() {
+  // setInterval(newUser, 1000);
+  // alert("Hi new person");
+}
+
+const stop = () => {
+  header.removeEventListener("mouseover", redBg);
+
+  header.removeEventListener("mouseleave", whiteBg);
+};
+function changeColor() {
+  event.preventDefault();
+  form.style.backgroundColor = "pink";
+}
+
 let header = document.querySelector("h1");
 let result = document.querySelector(".result");
 header.addEventListener("mouseover", redBg); //THIS IS THE FUNCTION CALL
@@ -27,10 +52,21 @@ const calculate = () => {
   let firstNumber = parseInt(document.getElementById("firstNumber").value);
   let secondNumber = parseInt(document.getElementById("secondNumber").value);
   let select = document.getElementById("select");
-  // if (select.option.value == "+") {
-  document.getElementById("sumResult").value = firstNumber + secondNumber;
-  //   }
-  //   if (select.option.value == "-") {
-  //     document.getElementById("sumResult").value = firstNumber - secondNumber;
-  //   }
+  console.log(select.value);
+  switch (select.value) {
+    case "+":
+      document.getElementById("sumResult").value = firstNumber + secondNumber;
+      break;
+    case "-":
+      document.getElementById("sumResult").value = firstNumber - secondNumber;
+      break;
+    case "*":
+      document.getElementById("sumResult").value = firstNumber * secondNumber;
+      break;
+    case "/":
+      document.getElementById("sumResult").value = firstNumber / secondNumber;
+      break;
+    default:
+      Window.alert("error");
+  }
 };
