@@ -49,24 +49,34 @@ form.addEventListener("reset", () => {
 // Bounce  include other Mathematical  Operations, the user can choose the operation from a select list (+ * - / % )
 
 const calculate = () => {
-  let firstNumber = parseInt(document.getElementById("firstNumber").value);
-  let secondNumber = parseInt(document.getElementById("secondNumber").value);
+  let firstNumber = document.getElementById("firstNumber").value;
+  let secondNumber = document.getElementById("secondNumber").value;
   let select = document.getElementById("select");
   console.log(select.value);
+
   switch (select.value) {
     case "+":
-      document.getElementById("sumResult").value = firstNumber + secondNumber;
+      document.getElementById("sumResult").value =
+        parseInt(firstNumber) + parseInt(secondNumber);
       break;
     case "-":
-      document.getElementById("sumResult").value = firstNumber - secondNumber;
+      document.getElementById("sumResult").value =
+        parseInt(firstNumber) - parseInt(secondNumber);
       break;
     case "*":
-      document.getElementById("sumResult").value = firstNumber * secondNumber;
+      document.getElementById("sumResult").value =
+        parseInt(firstNumber) * parseInt(secondNumber);
       break;
     case "/":
-      document.getElementById("sumResult").value = firstNumber / secondNumber;
+      document.getElementById("sumResult").value =
+        parseInt(firstNumber) / parseInt(secondNumber);
       break;
-    default:
-      Window.alert("error");
   }
+  if (isNaN(firstNumber) || isNan(secondNumber)) {
+    alert("These are invalid numbers! What were you thinking?!");
+  }
+  if (firstNumber.length == 0 || secondNumber.length == 0) {
+    alert("You're missing a number!");
+  }
+  //THESE TWO ARE NOT WORKING VERY WELL TOGETHER
 };
