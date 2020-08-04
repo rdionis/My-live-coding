@@ -1,4 +1,5 @@
 import React from "react";
+import { display, add } from "./helpers";
 
 export default class App extends React.Component {
   constructor(props) {
